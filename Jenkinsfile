@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('activate venv'){
       steps{
-        sh 'source /giftcode_env/Scripts/activate'
+        sh '/giftcode_env/Scripts/activate'
       }
     }
     stage('check python version'){
