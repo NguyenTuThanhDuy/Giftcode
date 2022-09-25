@@ -6,6 +6,7 @@ pipeline{
         sh '''
           cd ..
           cd Giftcode
+          chmod 777 giftcode_env/Scripts/activate
           giftcode_env/Scripts/activate
         '''
       }
