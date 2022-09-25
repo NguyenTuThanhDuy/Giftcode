@@ -4,6 +4,7 @@ pipeline{
     stage('activate venv'){
       steps{
         sh '''
+          apt install python3 -y
           cd ..
           cd Giftcode
           chmod 777 giftcode_env/Scripts/activate
@@ -13,7 +14,7 @@ pipeline{
     }
     stage('check python version'){
       steps{
-       sh 'python --version' 
+       sh 'python3 --version' 
       }
     }
     stage('check list components'){
@@ -23,7 +24,7 @@ pipeline{
     }
     stage('run giftcode'){
       steps{
-        sh 'python giftcode.py'
+        sh 'python3 giftcode.py'
       }
     }
   }
