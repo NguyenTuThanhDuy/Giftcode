@@ -3,7 +3,9 @@ pipeline{
   stages{
     stage('activate venv'){
       steps{
-        sh '/giftcode_env/Scripts/activate'
+        cd ..;
+        cd Giftcode;
+        sh 'giftcode_env/Scripts/activate'
       }
     }
     stage('check python version'){
