@@ -6,7 +6,7 @@ pipeline{
         sh '''
           cd ..
           cd Giftcode
-          sudo giftcode_env/Scripts/activate
+          giftcode_env/Scripts/activate
         '''
       }
     }
