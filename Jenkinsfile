@@ -13,7 +13,7 @@ pipeline{
     }
     stage('check python version'){
       steps{
-       sh 'python3 --version' 
+       sh 'python --version' 
       }
     }
     stage('check list components'){
@@ -23,7 +23,7 @@ pipeline{
     }
     stage('run giftcode'){
       steps{
-        sh 'python3 giftcode.py'
+        sh 'python giftcode.py'
       }
     }
   }
