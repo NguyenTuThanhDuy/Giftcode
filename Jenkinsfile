@@ -1,13 +1,12 @@
 pipeline{
   agent any
   stages{
-    stage('activate venv'){
+    stage('install requirements'){
       steps{
         sh '''
           cd ..
           cd Giftcode
-          chmod 777 giftcode_env/Scripts/activate
-          giftcode_env/Scripts/activate
+          pip3.10 install -r requirements.txt
         '''
       }
     }
