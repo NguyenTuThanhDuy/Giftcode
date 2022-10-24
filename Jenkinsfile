@@ -6,23 +6,23 @@ pipeline{
         sh '''
           cd ..
           cd Giftcode
-          pip3.10 install -r requirements.txt
+          pip install -r requirements.txt
         '''
       }
     }
     stage('check python version'){
       steps{
-       sh 'python3.10 --version' 
+       sh 'python3 --version' 
       }
     }
     stage('check list components'){
       steps{
-        sh 'pip3.10 list'
+        sh 'pip list'
       }
     }
     stage('run giftcode'){
       steps{
-        sh 'python3.10 giftcode.py'
+        sh 'python3 giftcode.py'
       }
     }
   }
